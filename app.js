@@ -52,6 +52,7 @@ function task38_5(char, word) {
 }
 task38_5("e", "lahore");
 
+
 var word = "a quick brown fox jumps over a lazy dog";
 
 function task38_6(dlt) {
@@ -248,3 +249,31 @@ function myDeleteFunction() {
     console.log("Delete")
 }
 
+// i
+var formContent=document.getElementById('form-content');
+console.log(formContent.nodeType);
+
+// ii
+var lastName=document.getElementById('lastName');
+console.log("Node type of Element : "+lastName.nodeType);
+console.log(lastName.childNodes);
+console.log("Node type of child element :"+lastName.childNodes[0].nodeType);
+
+// iii
+var lastName=document.getElementById('lastName');
+lastName.innerHTML="Last Name : Updated";
+
+// iv
+var main=document.getElementById('main-content');
+console.log("First Child : "+main.firstChild);
+console.log("Last Child : "+main.lastChild);
+
+// v
+var lastName=document.getElementById('lastName');
+console.log("Next Sibling : "+lastName.nextSibling);
+console.log("Previus Sibling : "+lastName.previousSibling);
+
+// vi
+var email=document.getElementById('email');
+console.log("nodetype : "+email.nodeType);
+console.log("parent Node : "+email.parentNode);
