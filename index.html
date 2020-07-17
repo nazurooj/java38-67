@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Chapter 38-42</h2>
+    <button onclick="task38_1()"> Task 1 </button>
+    <button onclick="task38_2()"> Task 2 </button>
+    <button onclick="task38_4()"> Task 4 </button>
+    <button onclick="task38_5()">Task 5</button>
+    <button onclick="task38_6()"> Task 6 </button>
+    <button onclick="task38_7()">Task 7</button>
+    <button onclick="task38_8()">Task 8</button>
+    <button onclick="task38_9()">Task 9</button>
+    <button onclick="change()">Task 10</button>
+
+    <h2>Chapter 43-48</h2>
+    <button> <a href="#" onclick="alert('Hi my name is Urooj Naz')">Task 1</a> </button>
+    <div>
+        <h3>Task 2: <br> Click on image</h3>
+        <img src="images/a30s.jpg" width="100px" onclick="alert('Thanks! for purchase')">
+        Samsung A30s
+        <img src=" images/a50.jpg" width="100px" onclick="alert('Thanks! for purchase')">Samsung a50
+        <img src="images/z.jpg" width="100px" onclick="alert('Thanks! for purchase')"> Samsung z flip
+
+    </div>
+    <div>
+        <h3>Task 3: </h3>
+        <table id="table1">
+            <tr>
+                <td>Index</td>
+                <td>Name</td>
+                <td>Class</td>
+                <td></td>
+            </tr>  
+            <tr>
+                <td>Student 1</td>
+                <td>300</td>
+                <td><button onclick="dlete(2)"> Dlete</button>
+            </tr>
+            <tr>
+                <td>Student 2</td>
+                <td>400</td>
+                <td><button onclick="dlete(2)"> Dlete</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Student 3</td>
+                <td>400</td>
+                <td><button onclick="dlete(3)"> Dlete</button>
+
+            </tr>
+            <tr>
+                <td>Student 4</td>
+                <td>400</td>
+                <td><button> Dlete</button></td>
+
+            </tr>
+            <tr>
+                <td>Student 5</td>
+                <td>400</td>
+                <td><button> Dlete</button></td>
+
+
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>Task 4: </h3>
+        <img src="images/a30s.jpg" width="150px" id="before" onmouseout="src=('images/a30s.jpg')"
+            onmouseover="src='images/a50.jpg'">
+    </div>
+
+    <div>
+        <h3>Task 5</h3>
+        <h4 style="color: blue;">COUNTER</h4>
+        <h2 id="counter">0</h2>
+        <button onclick="add()" value="add"> + Increase</button>
+        <button onclick="less()">- Decrease</button>
+    </div>
+
+    <h2>Chapter 49-48</h2>
+    <h3>Task 1</h3>
+    <h2>Signup Form</h2>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><a href="form.html">Sign
+            Up </a></button>
+
+    <div>
+        <h3>Task 2</h3>
+        <p id="para" style="height: 60px;">Galaxy Z Flip folds to be surprisingly small for an outstanding design
+        
+            <a href="JavaScript:void(0);" onclick="detail();" class="blue"> <em>Read More.</em></a>
+        </p>
+    </div>
+    <h3>Task 3</h3>
+    <table id="myTable" style="border: solid 1px; margin: 2px; padding: 3px;">
+        <th>Student Name </th>
+        <th>Score</th>
+        <tr>
+          <td>Mark</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>John </td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Stella </td>
+          <td>40</td>
+        </tr>
+        <tr>
+            <td>Robert </td>
+            <td>67</td>
+          </tr>
+      </table>
+      <br>
+      
+      <button onclick="myCreateFunction()">Edit row</button>
+      <button onclick="myDeleteFunction()">Delete row</button>
+
+      <h2>Chapter 58-67</h2>
+      <h3>Task 1</h3>
+      <!-- <button onclick="task58_1()">Task 1</button> -->
+      <div> <h1> DOM </h1> <div id=”form-content” class=”content”> <label for=”first-name”>First Name</label> <input type=”text” id=”first-name” /> <label for=”last-name”>Last Name</label> <input type=”text” id=”last-name” /> <label for=”email”>Email</label> <input type=”text” id=”email” /> </div>
+       <div id=”main-content” class=”content”> <p class=”render”> First Name : Alex</p> <p class=”render” id=”lastName”>Last Name: Bank</p> <p class=”render”> Email : alexbank@example.com</p> <p class=”render”> Country : Pakistan </p> <p class=”render”> contact : +92 300 1234567</p> </div> </div>
+</body>
+<script src="app.js">
+   
+  
+</script>
+
+</html>
