@@ -32,14 +32,22 @@ function task38_4() {
     var b = +prompt("Marks gained in second subject")
     var c = +prompt("Marks gained in third subject")
     var average = average();
-    var perc= perc(); 
-    document.write= average + perc ;
+    var perc = perc();
+    document.write = average + perc;
 }
-function average(a, b, c) {
-    return (a + b + c) / 3
+function average() {
+    var nums = a + b + c;
+    var totalSum = 0;
+    for (var i in nums) {
+        totalSum += nums[i];
+    }
+    var numsCnt = nums.length;
+    var average = totalSum / numsCnt;
+    return average ;
 }
-function perc(a,b,c) {
- return (a,b,c)/3*100
+
+function perc() {
+    return (a, b, c) / 3 * 100
 }
 
 function task38_5(char, word) {
@@ -179,36 +187,35 @@ function task38_9() {
         document.write("Overtime Salary is Rs." + hrs * 120);
     }
 }
-function change(){
-        var amount=prompt("Enter amount to withdraw!!");
-        var len=amount.length;
-        var ten=amount.slice(len-2,len);
-        if(ten >= 50){
-            ten = ten-50;
-            if(ten > 0){
-                var unit=ten/10;
-                document.write("You will have " + amount[0] + " hundreds notes 1 fifty note "+unit + " ten notes.");
-            }else{
-                var unit=ten/10;
-                document.write("You will have " + amount[0] + " hundreds notes 1 fifty note ");
-            }
-        }else{
-            if(ten > 0){
-                var unit=ten/10;
-                document.write("You will have " + amount[0] + " hundreds notes "+unit + " ten notes.");
-            }else{
-                document.write("You will have " + amount[0] + " hundreds notes ");
-            }
-    
+function change() {
+    var amount = prompt("Enter amount to withdraw!!");
+    var len = amount.length;
+    var ten = amount.slice(len - 2, len);
+    if (ten >= 50) {
+        ten = ten - 50;
+        if (ten > 0) {
+            var unit = ten / 10;
+            document.write("You will have " + amount[0] + " hundreds notes 1 fifty note " + unit + " ten notes.");
+        } else {
+            var unit = ten / 10;
+            document.write("You will have " + amount[0] + " hundreds notes 1 fifty note ");
         }
-    }
+    } else {
+        if (ten > 0) {
+            var unit = ten / 10;
+            document.write("You will have " + amount[0] + " hundreds notes " + unit + " ten notes.");
+        } else {
+            document.write("You will have " + amount[0] + " hundreds notes ");
+        }
 
-function dlete(i){
+    }
+}
+
+function dlt(i){
         var data=document.getElementById("table1");
         var row=data.getElementsByTagName('tr');
         console.log(row[i])
-    
-    }
+
 var count = 0;
 function add() {
     count += 1;
@@ -221,6 +228,19 @@ function less() {
     document.getElementById("counter").innerHTML = count
 }
 
+function openImage(e) {
+    console.log(e.src);
+    var modalImage= document.getElementById("modalImage")
+    modalImage.src=e.src
+    
+}
+function fontBig() {
+ document.getElementById("parent").style.fontSize = "30px";
+}
+function small() {
+    document.getElementById("parent").style.fontSize = "20px";
+   }
+    
 
 var modal = document.getElementById('id01');
 window.onclick = function (event) {
@@ -229,6 +249,17 @@ window.onclick = function (event) {
     }
 }
 
+var data= document.getElementsByTagName('td'[4])
+var delBtn= document.createElement("Button")
+var text= document.createTextNode("Delete")
+delBtn.appendChild(text);
+delBtn.setAttribute("onclick", "dleteIt(this)")
+tr.appendChild(delBtn)
+console.log(data);
+
+function dleteIt(e) {
+    e.parentNode.remove()
+}
 
 function detail() {
     var text = "that easily fits into your pocket, bag, or accessory Front to back, top to bottom, open to closed. Whichever way you look at it, the Galaxy Z Flip is one good-looking device.";
@@ -250,30 +281,30 @@ function myDeleteFunction() {
 }
 
 // i
-var formContent=document.getElementById('form-content');
+var formContent = document.getElementById('form-content');
 console.log(formContent.nodeType);
 
 // ii
-var lastName=document.getElementById('lastName');
-console.log("Node type of Element : "+lastName.nodeType);
+var lastName = document.getElementById('lastName');
+console.log("Node type of Element : " + lastName.nodeType);
 console.log(lastName.childNodes);
-console.log("Node type of child element :"+lastName.childNodes[0].nodeType);
+console.log("Node type of child element :" + lastName.childNodes[0].nodeType);
 
 // iii
-var lastName=document.getElementById('lastName');
-lastName.innerHTML="Last Name : Updated";
+var lastName = document.getElementById('lastName');
+lastName.innerHTML = "Last Name : Updated";
 
 // iv
-var main=document.getElementById('main-content');
-console.log("First Child : "+main.firstChild);
-console.log("Last Child : "+main.lastChild);
+var main = document.getElementById('main-content');
+console.log("First Child : " + main.firstChild);
+console.log("Last Child : " + main.lastChild);
 
 // v
-var lastName=document.getElementById('lastName');
-console.log("Next Sibling : "+lastName.nextSibling);
-console.log("Previus Sibling : "+lastName.previousSibling);
+var lastName = document.getElementById('lastName');
+console.log("Next Sibling : " + lastName.nextSibling);
+console.log("Previus Sibling : " + lastName.previousSibling);
 
 // vi
-var email=document.getElementById('email');
-console.log("nodetype : "+email.nodeType);
-console.log("parent Node : "+email.parentNode);
+var email = document.getElementById('email');
+console.log("nodetype : " + email.nodeType);
+console.log("parent Node : " + email.parentNode);

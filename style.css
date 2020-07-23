@@ -30,3 +30,17 @@ input[type=text], input[type=password] {
   color: blue
   ;
 }
+.image{
+  width: 80px;
+  height: 100px;
+  cursor: pointer;
+}
+
+#modalImage{
+  width: 50%;
+  height: 50%;
+  align-items: center;
+}
+#parent{
+  font-size: 20px;
+}
